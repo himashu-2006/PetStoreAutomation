@@ -102,11 +102,47 @@
   <version>2.20.0</version>  <!-- latest found reference → 2.20.0 :contentReference[oaicite:1]{index=1} -->
 </dependency>
 
-
-
-
  </dependencies>
-  
-  
-  
+ 
+  <build>
+  <pluginManagement>
+    <plugins>
+
+      <!-- Maven Surefire Plugin (to run TestNG tests) -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.5.4</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>testng.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+
+
+      <!-- Maven Compiler Plugin -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.14.1</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+         
+        </configuration>
+      </plugin>
+
+    </plugins>
+   </pluginManagement> 
+  </build>
+
 </project>
+
+
+
+
+
+
+
+
